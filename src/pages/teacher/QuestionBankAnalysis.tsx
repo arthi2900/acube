@@ -764,30 +764,31 @@ export default function QuestionBankAnalysis() {
                                     </div>
                                   ) : studentWrongAnswers[item.question_id]?.length > 0 ? (
                                     <>
-                                      {/* Header with question text */}
+                                      {/* Header with question text only */}
                                       <div className="space-y-2 pb-3 border-b">
-                                        <h4 className="font-medium text-sm flex items-center gap-2">
-                                          <Users className="h-4 w-4" />
-                                          Students with Wrong Answers - {studentWrongAnswers[item.question_id][0].question_text}
+                                        <h4 className="font-medium text-sm">
+                                          {studentWrongAnswers[item.question_id][0].question_text}
                                         </h4>
                                         
-                                        {/* Options (if available) */}
+                                        {/* Options with correct answer highlighted in green */}
                                         {studentWrongAnswers[item.question_id][0].options && 
                                          Array.isArray(studentWrongAnswers[item.question_id][0].options) && 
                                          (studentWrongAnswers[item.question_id][0].options as string[]).length > 0 && (
-                                          <div className="text-xs text-muted-foreground">
+                                          <div className="text-xs">
                                             <span className="font-medium">Options:</span>{' '}
-                                            {(studentWrongAnswers[item.question_id][0].options as string[]).join(', ')}
+                                            {(studentWrongAnswers[item.question_id][0].options as string[]).map((option, idx) => {
+                                              const isCorrect = option === studentWrongAnswers[item.question_id][0].correct_answer;
+                                              return (
+                                                <span key={idx}>
+                                                  {idx > 0 && ', '}
+                                                  <span className={isCorrect ? 'text-green-600 dark:text-green-400 font-medium' : 'text-muted-foreground'}>
+                                                    {option}
+                                                  </span>
+                                                </span>
+                                              );
+                                            })}
                                           </div>
                                         )}
-                                        
-                                        {/* Correct Answer */}
-                                        <div className="text-xs">
-                                          <span className="font-medium">Correct Answer:</span>{' '}
-                                          <span className="text-green-600 dark:text-green-400 font-medium">
-                                            {studentWrongAnswers[item.question_id][0].correct_answer}
-                                          </span>
-                                        </div>
                                       </div>
 
                                       {/* Student list */}
