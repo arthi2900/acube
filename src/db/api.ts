@@ -2690,6 +2690,18 @@ export const analysisApi = {
   async getStudentWrongAnswersForQuestion(questionId: string, schoolId: string, examId?: string) {
     console.log('[StudentWrongAnswers] Fetching for question:', questionId);
     
+    // First, get the question details
+    const { data: questionData, error: questionError } = await supabase
+      .from('questions')
+      .select('id, question_text, question_type, options, correct_answer')
+      .eq('id', questionId)
+      .single();
+
+    if (questionError) {
+      console.error('[StudentWrongAnswers] Question error:', questionError);
+      throw questionError;
+    }
+
     // Build query to get wrong answers with student details
     let query = supabase
       .from('exam_answers')
@@ -2735,13 +2747,17 @@ export const analysisApi = {
 
     console.log('[StudentWrongAnswers] Found wrong answers:', data.length);
 
-    // Transform the data to a simpler format
+    // Transform the data to include question details
     const result = data.map((answer: any) => ({
       student_id: answer.attempt?.student?.id || '',
       student_name: answer.attempt?.student?.full_name || 'Unknown Student',
       student_answer: answer.student_answer || '',
       exam_title: answer.attempt?.exam?.title || 'Unknown Exam',
       attempt_id: answer.attempt_id || '',
+      question_text: questionData?.question_text || '',
+      question_type: questionData?.question_type || 'mcq',
+      options: questionData?.options || null,
+      correct_answer: questionData?.correct_answer || '',
     }));
 
     return result;

@@ -756,34 +756,56 @@ export default function QuestionBankAnalysis() {
                                   {item.wrong_attempts_count}
                                 </Button>
                               </PopoverTrigger>
-                              <PopoverContent className="w-80" align="end">
-                                <div className="space-y-2">
-                                  <h4 className="font-medium text-sm flex items-center gap-2">
-                                    <Users className="h-4 w-4" />
-                                    Students with Wrong Answers
-                                  </h4>
+                              <PopoverContent className="w-96" align="end">
+                                <div className="space-y-3">
                                   {loadingWrongAnswers === item.question_id ? (
                                     <div className="flex items-center justify-center py-4">
                                       <Loader2 className="h-5 w-5 animate-spin text-muted-foreground" />
                                     </div>
                                   ) : studentWrongAnswers[item.question_id]?.length > 0 ? (
-                                    <div className="max-h-[300px] overflow-y-auto space-y-2">
-                                      {studentWrongAnswers[item.question_id].map((answer, idx) => (
-                                        <div 
-                                          key={`${answer.student_id}-${answer.attempt_id}-${idx}`}
-                                          className="p-2 rounded-md bg-muted/50 text-sm space-y-1"
-                                        >
-                                          <div className="font-medium">{answer.student_name}</div>
+                                    <>
+                                      {/* Header with question text */}
+                                      <div className="space-y-2 pb-3 border-b">
+                                        <h4 className="font-medium text-sm flex items-center gap-2">
+                                          <Users className="h-4 w-4" />
+                                          Students with Wrong Answers - {studentWrongAnswers[item.question_id][0].question_text}
+                                        </h4>
+                                        
+                                        {/* Options (if available) */}
+                                        {studentWrongAnswers[item.question_id][0].options && 
+                                         Array.isArray(studentWrongAnswers[item.question_id][0].options) && 
+                                         (studentWrongAnswers[item.question_id][0].options as string[]).length > 0 && (
                                           <div className="text-xs text-muted-foreground">
-                                            Exam: {answer.exam_title}
+                                            <span className="font-medium">Options:</span>{' '}
+                                            {(studentWrongAnswers[item.question_id][0].options as string[]).join(', ')}
                                           </div>
-                                          <div className="text-xs">
-                                            <span className="font-medium">Answer:</span>{' '}
-                                            <span className="text-destructive">{answer.student_answer || 'No answer'}</span>
-                                          </div>
+                                        )}
+                                        
+                                        {/* Correct Answer */}
+                                        <div className="text-xs">
+                                          <span className="font-medium">Correct Answer:</span>{' '}
+                                          <span className="text-green-600 dark:text-green-400 font-medium">
+                                            {studentWrongAnswers[item.question_id][0].correct_answer}
+                                          </span>
                                         </div>
-                                      ))}
-                                    </div>
+                                      </div>
+
+                                      {/* Student list */}
+                                      <div className="max-h-[250px] overflow-y-auto space-y-1.5">
+                                        {studentWrongAnswers[item.question_id].map((answer, idx) => (
+                                          <div 
+                                            key={`${answer.student_id}-${answer.attempt_id}-${idx}`}
+                                            className="text-sm flex items-center justify-between gap-2 py-1.5 px-2 rounded hover:bg-muted/50"
+                                          >
+                                            <span className="font-medium truncate">{answer.student_name}</span>
+                                            <span className="text-muted-foreground">--</span>
+                                            <span className="text-destructive font-medium truncate">
+                                              {answer.student_answer || 'No answer'}
+                                            </span>
+                                          </div>
+                                        ))}
+                                      </div>
+                                    </>
                                   ) : (
                                     <div className="text-sm text-muted-foreground py-4 text-center">
                                       No wrong answers found

@@ -402,6 +402,10 @@ export interface StudentWrongAnswer {
   student_answer: string;
   exam_title: string;
   attempt_id: string;
+  question_text?: string;
+  question_type?: QuestionType;
+  options?: string[] | MatchPair[] | null;
+  correct_answer?: string;
 }
 
 // Question Paper Template Types
