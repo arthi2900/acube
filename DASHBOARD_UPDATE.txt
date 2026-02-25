@@ -1,0 +1,17 @@
+STUDENT DASHBOARD UPDATE - COMPLETED CARD REMOVED
+
+✅ Removed 'Completed' card from Student Dashboard
+✅ Changed grid layout from 3 columns to 2 columns
+✅ Kept 'Current Exam' and 'Upcoming Exams' cards
+✅ Lint check passed
+
+Changes:
+- Updated src/pages/student/StudentDashboard.tsx
+- Grid layout: md:grid-cols-3 → md:grid-cols-2
+- Removed Completed card (green border, CheckCircle2 icon)
+
+Remaining Cards:
+1. Current Exam (blue border, PlayCircle icon)
+2. Upcoming Exams (orange border, Clock icon)
+
+Status: ✅ Complete

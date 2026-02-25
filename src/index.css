@@ -1,0 +1,572 @@
+/* stylelint-disable */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here.
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+    --background: 0 0% 100%;
+    --foreground: 240 60% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 60% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 60% 15%;
+    --primary: 330 81% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 330 81% 70%;
+    --secondary: 217 91% 60%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 240 20% 96%;
+    --muted-foreground: 240 10% 45%;
+    --accent: 262 83% 58%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    --border: 240 20% 90%;
+    --input: 240 20% 90%;
+    --ring: 330 81% 60%;
+    --chart-1: 217 91% 60%;
+    --chart-2: 217 91% 55%;
+    --chart-3: 217 91% 50%;
+    --chart-4: 280 70% 60%;
+    --chart-5: 200 80% 55%;
+    --sidebar-background: 350 100% 97%;
+    --sidebar-foreground: 240 60% 15%;
+    --sidebar-primary: 330 81% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 330 81% 95%;
+    --sidebar-accent-foreground: 240 60% 15%;
+    --sidebar-border: 350 100% 92%;
+    --sidebar-ring: 330 81% 60%;
+    --header-start: 330 81% 60%;
+    --header-end: 262 83% 58%;
+  }
+
+  .dark {
+    --background: 240 60% 8%;
+    --foreground: 0 0% 98%;
+    --card: 240 50% 12%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 50% 12%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 330 81% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 330 81% 70%;
+    --secondary: 217 91% 60%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 240 40% 18%;
+    --muted-foreground: 240 10% 65%;
+    --accent: 262 83% 58%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    --border: 240 40% 20%;
+    --input: 240 40% 20%;
+    --ring: 330 81% 60%;
+    --chart-1: 217 91% 60%;
+    --chart-2: 217 91% 55%;
+    --chart-3: 217 91% 50%;
+    --chart-4: 280 70% 60%;
+    --chart-5: 200 80% 55%;
+    --sidebar-background: 240 50% 12%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 330 81% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 262 83% 58%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 240 40% 20%;
+    --sidebar-ring: 330 81% 60%;
+    --header-start: 330 81% 60%;
+    --header-end: 262 83% 58%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    background-color: #FFF5F7;
+    @apply text-foreground;
+  }
+}
+
+/* Gradient utilities for A Cube EdTech theme */
+@layer utilities {
+  .gradient-header {
+    background: linear-gradient(90deg, hsl(var(--header-start)), hsl(var(--header-end)));
+  }
+
+  .gradient-card-blue {
+    background: linear-gradient(135deg, hsl(217 91% 60%), hsl(217 91% 50%));
+  }
+
+  .gradient-card-green {
+    background: linear-gradient(135deg, hsl(142 76% 45%), hsl(142 76% 36%));
+  }
+
+  .gradient-card-red {
+    background: linear-gradient(135deg, hsl(0 84% 60%), hsl(0 84% 50%));
+  }
+
+  .gradient-purple-blue {
+    background: linear-gradient(135deg, hsl(250 80% 60%), hsl(220 90% 55%));
+  }
+
+  .gradient-purple-blue-dark {
+    background: linear-gradient(135deg, hsl(250 80% 40%), hsl(220 90% 45%));
+  }
+
+  .gradient-hero {
+    background: linear-gradient(135deg, #1a5f8a, #3396D3);
+    position: relative;
+  }
+
+  .gradient-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: 
+      radial-gradient(circle at 20% 30%, rgba(51, 150, 211, 0.2) 0%, transparent 50%),
+      radial-gradient(circle at 80% 70%, rgba(51, 150, 211, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 50% 50%, rgba(51, 150, 211, 0.12) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .glass-card {
+    background: linear-gradient(135deg, rgba(228, 0, 75, 0.75), rgba(199, 30, 100, 0.75), rgba(199, 54, 89, 0.75));
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  }
+
+  .glass-card-hover {
+    transition: all 0.3s ease;
+  }
+
+  .glass-card-hover:hover {
+    background: linear-gradient(135deg, rgba(228, 0, 75, 0.85), rgba(199, 30, 100, 0.85), rgba(199, 54, 89, 0.85));
+    box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.4);
+    transform: translateY(-4px);
+  }
+
+  .glow-primary {
+    box-shadow: 0 0 20px rgba(224, 107, 128, 0.5), 0 0 40px rgba(224, 107, 128, 0.3);
+  }
+
+  .glow-secondary {
+    box-shadow: 0 0 20px rgba(198, 66, 110, 0.4), 0 0 40px rgba(198, 66, 110, 0.2);
+  }
+
+  .glow-accent {
+    box-shadow: 0 0 20px rgba(224, 107, 128, 0.4), 0 0 40px rgba(224, 107, 128, 0.2);
+  }
+
+  .elegant-shadow {
+    box-shadow: 0 10px 30px -10px rgba(224, 107, 128, 0.3), 0 0 20px rgba(224, 107, 128, 0.15);
+  }
+
+  .elegant-shadow-lg {
+    box-shadow: 0 20px 50px -15px rgba(224, 107, 128, 0.4), 0 0 30px rgba(224, 107, 128, 0.2);
+  }
+
+  .smooth-gradient-text {
+    background: linear-gradient(135deg, hsl(250 80% 60%), hsl(220 90% 55%), hsl(260 75% 65%));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  /* Custom scrollbar styles */
+  .scrollbar-thin {
+    scrollbar-width: thin;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .scrollbar-thumb-primary\/20::-webkit-scrollbar-thumb {
+    background-color: hsl(var(--primary) / 0.2);
+    border-radius: 3px;
+  }
+
+  .scrollbar-thumb-primary\/20::-webkit-scrollbar-thumb:hover {
+    background-color: hsl(var(--primary) / 0.3);
+  }
+
+  .scrollbar-track-transparent::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+}
+
+/* Print styles for question papers */
+@media print {
+  /* Reset page margins and setup */
+  @page {
+    margin: 1.5cm;
+    size: A4;
+  }
+
+  /* Clean white background for print */
+  * {
+    color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  body {
+    background: white !important;
+    color: black !important;
+  }
+
+  /* Hide UI elements we don't want in print */
+  body.printing-mode nav,
+  body.printing-mode header:not(.print-header),
+  body.printing-mode footer,
+  body.printing-mode aside,
+  body.printing-mode [role="navigation"],
+  body.printing-mode [role="banner"],
+  body.printing-mode .sidebar,
+  body.printing-mode > div:not([data-radix-portal]) {
+    display: none !important;
+  }
+
+  /* Hide dialog overlay */
+  body.printing-mode [data-radix-dialog-overlay] {
+    display: none !important;
+  }
+
+  /* Make dialog content full width and remove styling */
+  body.printing-mode .print-content {
+    max-width: 100% !important;
+    width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    background: white !important;
+    padding: 1rem !important;
+    margin: 0 !important;
+    overflow: visible !important;
+    border: none !important;
+    box-shadow: none !important;
+    position: static !important;
+  }
+
+  /* Hide buttons and UI elements inside print-content */
+  body.printing-mode .print-content button,
+  body.printing-mode .print-content .print-hide,
+  body.printing-mode .print-content .screen-only,
+  .print-hide,
+  button {
+    display: none !important;
+  }
+
+  /* Print header styling */
+  .print-header {
+    text-align: center !important;
+    margin-bottom: 2rem !important;
+    padding-bottom: 1rem !important;
+    border-bottom: 2px solid #000 !important;
+  }
+
+  .print-header h1 {
+    font-size: 1.5rem !important;
+    font-weight: 700 !important;
+    margin-bottom: 0.5rem !important;
+    color: black !important;
+  }
+
+  .print-header p {
+    font-size: 0.875rem !important;
+    color: #4b5563 !important;
+    margin: 0.25rem 0 !important;
+  }
+
+  /* Marks badge styling */
+  .marks-badge {
+    background: #fef3c7 !important;
+    color: #92400e !important;
+    padding: 0.25rem 0.5rem !important;
+    border-radius: 0.25rem !important;
+    font-size: 0.75rem !important;
+    font-weight: 600 !important;
+    border: 1px solid #fbbf24 !important;
+    margin-left: 1rem !important;
+  }
+
+  /* Question styling */
+  .question-item {
+    page-break-inside: avoid;
+    margin-bottom: 1.5rem !important;
+  }
+
+  .question-number {
+    font-weight: 600 !important;
+    color: black !important;
+  }
+
+  .question-content {
+    color: black !important;
+  }
+
+  /* Options styling */
+  .text-sm {
+    color: black !important;
+  }
+
+  /* Remove shadows and borders for cleaner print */
+  .shadow,
+  .shadow-sm,
+  .shadow-md,
+  .shadow-lg,
+  .shadow-xl {
+    box-shadow: none !important;
+  }
+
+  /* Keep essential borders only */
+  .border-b {
+    border-bottom: 1px solid #e5e7eb !important;
+    page-break-inside: avoid;
+  }
+
+  /* Ensure proper spacing */
+  .space-y-6 > * + * {
+    margin-top: 1.5rem !important;
+  }
+
+  /* Question numbering and text */
+  .font-medium {
+    font-weight: 500 !important;
+  }
+
+  /* Options styling */
+  .ml-4 {
+    margin-left: 1rem !important;
+  }
+
+  .space-y-1 > * + * {
+    margin-top: 0.25rem !important;
+  }
+
+  /* Images */
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+    page-break-inside: avoid;
+    display: block !important;
+  }
+
+  /* Answer key section */
+  .answer-key-section {
+    background: #f3f4f6 !important;
+    border: 1px solid #d1d5db !important;
+    padding: 0.75rem !important;
+    margin-top: 0.75rem !important;
+    border-radius: 0.375rem !important;
+    page-break-inside: avoid;
+  }
+
+  /* Question container */
+  .question-item {
+    page-break-inside: avoid;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Prevent orphans and widows */
+  p {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* Remove card styling for print */
+  .card,
+  .card-header,
+  .card-content {
+    border: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    padding: 0 !important;
+  }
+
+  /* Ensure proper spacing for card content */
+  body.printing-mode .print-content .space-y-4,
+  body.printing-mode .print-content .space-y-6 {
+    display: block !important;
+  }
+
+  /* Make sure text is visible */
+  body.printing-mode .print-content .font-medium,
+  body.printing-mode .print-content .text-sm,
+  body.printing-mode .print-content span,
+  body.printing-mode .print-content div {
+    color: black !important;
+  }
+
+  /* Question text styling */
+  .question-number {
+    font-weight: 600 !important;
+    color: black !important;
+  }
+
+  .question-content {
+    color: black !important;
+  }
+
+  .question-text-wrapper {
+    color: black !important;
+  }
+
+  /* Options styling */
+  body.printing-mode .print-content .ml-4 div {
+    color: black !important;
+    font-size: 0.875rem !important;
+    line-height: 1.5 !important;
+  }
+}
+
+/* Rich Text Editor Styles */
+.rich-text-editor-wrapper .quill {
+  border-radius: 0.5rem;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--background));
+}
+
+.rich-text-editor-wrapper .ql-toolbar {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  border: 1px solid hsl(var(--border));
+  border-bottom: none;
+  background: hsl(var(--muted));
+}
+
+.rich-text-editor-wrapper .ql-container {
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  border: 1px solid hsl(var(--border));
+  border-top: none;
+  font-family: inherit;
+  font-size: 0.875rem;
+  min-height: 120px;
+}
+
+.rich-text-editor-wrapper .ql-editor {
+  min-height: 120px;
+  color: hsl(var(--foreground));
+}
+
+.rich-text-editor-wrapper .ql-editor.ql-blank::before {
+  color: hsl(var(--muted-foreground));
+  font-style: normal;
+}
+
+.rich-text-editor-wrapper .ql-snow .ql-stroke {
+  stroke: hsl(var(--foreground));
+}
+
+.rich-text-editor-wrapper .ql-snow .ql-fill {
+  fill: hsl(var(--foreground));
+}
+
+.rich-text-editor-wrapper .ql-snow .ql-picker-label {
+  color: hsl(var(--foreground));
+}
+
+.rich-text-editor-wrapper .ql-toolbar button:hover,
+.rich-text-editor-wrapper .ql-toolbar button:focus,
+.rich-text-editor-wrapper .ql-toolbar button.ql-active {
+  color: hsl(var(--primary));
+}
+
+.rich-text-editor-wrapper .ql-toolbar button:hover .ql-stroke,
+.rich-text-editor-wrapper .ql-toolbar button:focus .ql-stroke,
+.rich-text-editor-wrapper .ql-toolbar button.ql-active .ql-stroke {
+  stroke: hsl(var(--primary));
+}
+
+.rich-text-editor-wrapper .ql-toolbar button:hover .ql-fill,
+.rich-text-editor-wrapper .ql-toolbar button:focus .ql-fill,
+.rich-text-editor-wrapper .ql-toolbar button.ql-active .ql-fill {
+  fill: hsl(var(--primary));
+}
+
+/* Dark mode support */
+.dark .rich-text-editor-wrapper .quill {
+  background: hsl(var(--background));
+}
+
+.dark .rich-text-editor-wrapper .ql-toolbar {
+  background: hsl(var(--muted));
+  border-color: hsl(var(--border));
+}
+
+.dark .rich-text-editor-wrapper .ql-container {
+  border-color: hsl(var(--border));
+}
+
+.dark .rich-text-editor-wrapper .ql-editor {
+  color: hsl(var(--foreground));
+}
+
+/* Display rich text content properly */
+.question-content p {
+  margin-bottom: 0.5rem;
+}
+
+.question-content strong {
+  font-weight: 600;
+}
+
+.question-content em {
+  font-style: italic;
+}
+
+.question-content u {
+  text-decoration: underline;
+}
+
+.question-content ol,
+.question-content ul {
+  margin-left: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.question-content ol {
+  list-style-type: decimal;
+}
+
+.question-content ul {
+  list-style-type: disc;
+}
+
+.question-content h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.question-content h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.question-content h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}

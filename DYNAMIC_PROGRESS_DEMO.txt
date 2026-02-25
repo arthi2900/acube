@@ -1,0 +1,200 @@
+╔═══════════════════════════════════════════════════════════════════════════╗
+║                    DYNAMIC PROGRESS BAR - LIVE DEMO                       ║
+╠═══════════════════════════════════════════════════════════════════════════╣
+║                                                                           ║
+║  Submitting an exam with 20 questions...                                 ║
+║                                                                           ║
+╠═══════════════════════════════════════════════════════════════════════════╣
+
+Time: 0.0s
+┌─────────────────────────────────────────────────────────────────────────┐
+│                          Submitting Exam                                │
+├─────────────────────────────────────────────────────────────────────────┤
+│                                                                         │
+│  [░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░]  │
+│                        0% - Step 1 of 4                                 │
+│                                                                         │
+│  🔄  Saving your answers...                                             │
+│  ⚪  Submitting exam...                                                 │
+│  ⚪  Evaluating your answers...                                         │
+│  ⚪  Finalizing results...                                              │
+│                                                                         │
+│  ℹ️  Please wait while we process your submission.                     │
+│     Do not close this window.                                          │
+└─────────────────────────────────────────────────────────────────────────┘
+
+Time: 0.1s (Question 1 saved)
+┌─────────────────────────────────────────────────────────────────────────┐
+│                          Submitting Exam                                │
+├─────────────────────────────────────────────────────────────────────────┤
+│                                                                         │
+│  [█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░]  │
+│                        1% - Step 1 of 4                                 │
+│                                                                         │
+│  🔄  Saving your answers... (1/20)                                      │
+│  ⚪  Submitting exam...                                                 │
+│  ⚪  Evaluating your answers...                                         │
+│  ⚪  Finalizing results...                                              │
+│                                                                         │
+│  ℹ️  Please wait while we process your submission.                     │
+│     Do not close this window.                                          │
+└─────────────────────────────────────────────────────────────────────────┘
+
+Time: 0.3s (Question 3 saved)
+┌─────────────────────────────────────────────────────────────────────────┐
+│                          Submitting Exam                                │
+├─────────────────────────────────────────────────────────────────────────┤
+│                                                                         │
+│  [███░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░]  │
+│                        4% - Step 1 of 4                                 │
+│                                                                         │
+│  🔄  Saving your answers... (3/20)                                      │
+│  ⚪  Submitting exam...                                                 │
+│  ⚪  Evaluating your answers...                                         │
+│  ⚪  Finalizing results...                                              │
+│                                                                         │
+│  ℹ️  Please wait while we process your submission.                     │
+│     Do not close this window.                                          │
+└─────────────────────────────────────────────────────────────────────────┘
+
+Time: 0.5s (Question 5 saved)
+┌─────────────────────────────────────────────────────────────────────────┐
+│                          Submitting Exam                                │
+├─────────────────────────────────────────────────────────────────────────┤
+│                                                                         │
+│  [██████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░]  │
+│                        6% - Step 1 of 4                                 │
+│                                                                         │
+│  🔄  Saving your answers... (5/20)                                      │
+│  ⚪  Submitting exam...                                                 │
+│  ⚪  Evaluating your answers...                                         │
+│  ⚪  Finalizing results...                                              │
+│                                                                         │
+│  ℹ️  Please wait while we process your submission.                     │
+│     Do not close this window.                                          │
+└─────────────────────────────────────────────────────────────────────────┘
+
+Time: 1.0s (Question 10 saved)
+┌─────────────────────────────────────────────────────────────────────────┐
+│                          Submitting Exam                                │
+├─────────────────────────────────────────────────────────────────────────┤
+│                                                                         │
+│  [████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░]  │
+│                       13% - Step 1 of 4                                 │
+│                                                                         │
+│  🔄  Saving your answers... (10/20)                                     │
+│  ⚪  Submitting exam...                                                 │
+│  ⚪  Evaluating your answers...                                         │
+│  ⚪  Finalizing results...                                              │
+│                                                                         │
+│  ℹ️  Please wait while we process your submission.                     │
+│     Do not close this window.                                          │
+└─────────────────────────────────────────────────────────────────────────┘
+
+Time: 1.5s (Question 15 saved)
+┌─────────────────────────────────────────────────────────────────────────┐
+│                          Submitting Exam                                │
+├─────────────────────────────────────────────────────────────────────────┤
+│                                                                         │
+│  [██████████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░]  │
+│                       19% - Step 1 of 4                                 │
+│                                                                         │
+│  🔄  Saving your answers... (15/20)                                     │
+│  ⚪  Submitting exam...                                                 │
+│  ⚪  Evaluating your answers...                                         │
+│  ⚪  Finalizing results...                                              │
+│                                                                         │
+│  ℹ️  Please wait while we process your submission.                     │
+│     Do not close this window.                                          │
+└─────────────────────────────────────────────────────────────────────────┘
+
+Time: 2.0s (Question 20 saved - Step 1 Complete!)
+┌─────────────────────────────────────────────────────────────────────────┐
+│                          Submitting Exam                                │
+├─────────────────────────────────────────────────────────────────────────┤
+│                                                                         │
+│  [████████████████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░]  │
+│                       25% - Step 2 of 4                                 │
+│                                                                         │
+│  ✅  Saving your answers...                                             │
+│  🔄  Submitting exam...                                                 │
+│  ⚪  Evaluating your answers...                                         │
+│  ⚪  Finalizing results...                                              │
+│                                                                         │
+│  ℹ️  Please wait while we process your submission.                     │
+│     Do not close this window.                                          │
+└─────────────────────────────────────────────────────────────────────────┘
+
+Time: 2.5s (Step 2 Complete)
+┌─────────────────────────────────────────────────────────────────────────┐
+│                          Submitting Exam                                │
+├─────────────────────────────────────────────────────────────────────────┤
+│                                                                         │
+│  [████████████████████████████████████████░░░░░░░░░░░░░░░░░░░░░░░░░]  │
+│                       50% - Step 3 of 4                                 │
+│                                                                         │
+│  ✅  Saving your answers...                                             │
+│  ✅  Submitting exam...                                                 │
+│  🔄  Evaluating your answers...                                         │
+│  ⚪  Finalizing results...                                              │
+│                                                                         │
+│  ℹ️  Please wait while we process your submission.                     │
+│     Do not close this window.                                          │
+└─────────────────────────────────────────────────────────────────────────┘
+
+Time: 3.0s (Step 3 Complete)
+┌─────────────────────────────────────────────────────────────────────────┐
+│                          Submitting Exam                                │
+├─────────────────────────────────────────────────────────────────────────┤
+│                                                                         │
+│  [████████████████████████████████████████████████████░░░░░░░░░░░░░]  │
+│                       75% - Step 4 of 4                                 │
+│                                                                         │
+│  ✅  Saving your answers...                                             │
+│  ✅  Submitting exam...                                                 │
+│  ✅  Evaluating your answers...                                         │
+│  🔄  Finalizing results...                                              │
+│                                                                         │
+│  ℹ️  Please wait while we process your submission.                     │
+│     Do not close this window.                                          │
+└─────────────────────────────────────────────────────────────────────────┘
+
+Time: 3.5s (All Steps Complete!)
+┌─────────────────────────────────────────────────────────────────────────┐
+│                          Submitting Exam                                │
+├─────────────────────────────────────────────────────────────────────────┤
+│                                                                         │
+│  [████████████████████████████████████████████████████████████████]  │
+│                      100% - Step 4 of 4                                 │
+│                                                                         │
+│  ✅  Saving your answers...                                             │
+│  ✅  Submitting exam...                                                 │
+│  ✅  Evaluating your answers...                                         │
+│  ✅  Finalizing results...                                              │
+│                                                                         │
+│  ℹ️  Please wait while we process your submission.                     │
+│     Do not close this window.                                          │
+└─────────────────────────────────────────────────────────────────────────┘
+
+Time: 4.0s
+→ Dialog closes automatically
+→ Toast notification: "Exam submitted and evaluated successfully"
+→ Redirects to results page
+
+╔═══════════════════════════════════════════════════════════════════════════╗
+║                              KEY FEATURES                                 ║
+╠═══════════════════════════════════════════════════════════════════════════╣
+║                                                                           ║
+║  ✅ Progress bar fills GRADUALLY (not instantly)                          ║
+║  ✅ Question counter updates: (1/20), (2/20), (3/20), ...                ║
+║  ✅ Percentage increases: 1%, 2%, 3%, ..., 25%                           ║
+║  ✅ Smooth 300ms transitions between updates                             ║
+║  ✅ Real-time feedback showing system is working                         ║
+║  ✅ Professional, polished user experience                               ║
+║                                                                           ║
+╚═══════════════════════════════════════════════════════════════════════════╝
+
+TOTAL TIME: ~3.5 seconds for 20-question exam
+UPDATES: 20 progress updates during Step 1 (one per question)
+ANIMATION: Smooth, hardware-accelerated CSS transitions
+RESULT: Transparent, reassuring, professional submission experience
