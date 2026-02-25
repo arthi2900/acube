@@ -680,23 +680,18 @@ export default function QuestionBankAnalysis() {
                       >
                         <td className="p-2 align-middle whitespace-nowrap font-medium">{index + 1}</td>
                         <td className="p-2 align-middle">
-                          <div className="flex flex-col gap-1">
-                            <TooltipProvider>
-                              <Tooltip>
-                                <TooltipTrigger asChild>
-                                  <span className="cursor-help">
-                                    {truncateText(item.question_text)}
-                                  </span>
-                                </TooltipTrigger>
-                                <TooltipContent className="max-w-md">
-                                  <p className="whitespace-pre-wrap">{item.question_text}</p>
-                                </TooltipContent>
-                              </Tooltip>
-                            </TooltipProvider>
-                            <div className="text-xs text-muted-foreground">
-                              <span className="font-medium">Correct Answer:</span> {item.correct_answer}
-                            </div>
-                          </div>
+                          <TooltipProvider>
+                            <Tooltip>
+                              <TooltipTrigger asChild>
+                                <span className="cursor-help">
+                                  {truncateText(item.question_text)}
+                                </span>
+                              </TooltipTrigger>
+                              <TooltipContent className="max-w-md">
+                                <p className="whitespace-pre-wrap">{item.question_text}</p>
+                              </TooltipContent>
+                            </Tooltip>
+                          </TooltipProvider>
                         </td>
                         <td className="p-2 align-middle whitespace-nowrap">
                           <Badge variant="outline">
@@ -752,7 +747,6 @@ export default function QuestionBankAnalysis() {
                                   size="sm"
                                   className="h-auto p-1 font-semibold text-destructive hover:text-destructive hover:bg-destructive/10"
                                 >
-                                  <Users className="h-3 w-3 mr-1" />
                                   {item.wrong_attempts_count}
                                 </Button>
                               </PopoverTrigger>
